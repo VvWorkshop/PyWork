@@ -1,6 +1,49 @@
-a = 3
-print(5)
-s = 3
-print("this is branch work")
-print ("push")
-print("push test")
+def binary(num1, CByte):
+    bit = []
+    num1 = float(num1)
+    a = int(CByte)
+    print("Work")
+    count = 0
+    while a != 0: 
+        bit.append(pow(2,count))
+        count = count+1
+        a = a-1
+        print(bit)
+    CByte = []
+    isFinished = False
+    count2 = -1
+    while count2 != (count+1)*-1:
+        if bit[count] < num1:
+            CByte.insert(1)
+            num1 = num1-CByte[count]
+            count2 = count2-1
+        else:
+            CByte.insert(0)
+            count2 = count2-1    
+    print(CByte)        
+        
+            
+binary(input,4)        
+
+            
+            
+   
+  
+        
+        
+        
+    
+ 
+      
+
+  
+  
+        
+
+
+
+
+        
+ 
+
+

@@ -1,6 +1,6 @@
 def binary(num1, CByte):
     bit = []
-    num1 = float(num1)
+    num1 = num1
     a = int(CByte)
     print("Work")
     count = 0
@@ -14,19 +14,17 @@ def binary(num1, CByte):
     count2 = -1
     count = (count*-1)-1
     while count2 != count:
-        if bit[count2] < num1:
-            CByte.insert(1)
-            num1 = num1-CByte[count2]
+        if bit[count2] <= int(num1):
+            CByte.append(1)
+            num1 = num1-bit[count2]
             count2 = count2-1
-            print("gets here")
         else:
-            CByte.insert(0)
-            count2 = count2-1 
-            print("gets here 2")   
+            CByte.append(0)
+            count2 = count2-1  
     print(CByte)        
         
             
-binary(4,4)    
+binary(9,4)    
 
             
             

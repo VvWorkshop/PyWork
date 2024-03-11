@@ -1,14 +1,13 @@
 def binary(num1, CByte):
+    print(num1)
     bit = []
     num1 = num1
     a = int(CByte)
-    print("Work")
     count = 0
     while a != 0: 
         bit.append(pow(2,count))
         count = count+1
         a = a-1
-        print(bit)
     CByte = []
     isFinished = False
     count2 = -1
@@ -21,10 +20,32 @@ def binary(num1, CByte):
         else:
             CByte.append(0)
             count2 = count2-1  
-    print(CByte)        
+    print(CByte)
+    print("^ the combination above is your input's binary combination")
+    isOne = False
+    count2 = -1
+    while count2 != count:
+        if isOne == True:
+            if CByte[count2] == 1:
+                CByte[count2] = 0
+            else:
+                CByte[count2] = 1    
+        if isOne == False and CByte[count2] == 1:
+            isOne = True
+        count2 = count2-1    
+    print(CByte)
+    print("^ the number above is your input's minus binary combination")
+
+
+            
+    
+
+
+    
+                
         
             
-binary(9,4)    
+binary(4,4)    
 
             
             
